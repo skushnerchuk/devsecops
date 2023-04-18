@@ -40,13 +40,15 @@
 
 Могут быть случаи, когда подобного рода атака должна совершаться в отношении только одного или нескольких пользователей, а другие о ней знать не должны.  Доработав скрипт, мы получим его срабатывание только при наличии в адресной строке параметра **attack** со значением **true**:
 
-<script> 
-    const params = new URLSearchParams(window.location.search); 
-    const attack= params.get("attack"); 
-    if(attack==="true") { 
-        window.location.href="https://google.com" 
-    }; 
-</script>
+<pre>
+    <script> 
+        const params = new URLSearchParams(window.location.search); 
+        const attack= params.get("attack"); 
+        if(attack==="true") { 
+            window.location.href="https://google.com" 
+        }; 
+    </script>
+</pre>
 
 Нужным пользователям может быть отправлена должным образом сформированная ссылка фишинговым письмом, а остальные про наличие такой проблемы даже не узнают:
 
