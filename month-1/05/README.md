@@ -1,6 +1,8 @@
-# I. Теоретическая часть.
+## Безопасная разработка в HTML/CSS и PHP
 
-В соответствии со статистикой [NST](https://nvd.nist.gov/vuln/search/statistics?form_type=Basic&results_type=statistics&query=php+xss&search_type=all&isCpeNameSearch=false) количество найденных уязвимостей XSS составило:
+### I. Теоретическая часть.
+
+В соответствии со статистикой [NST](https://nvd.nist.gov/vuln/search/statistics?form_type=Basic&results_type=statistics&query=php+xss&search_type=all&isCpeNameSearch=false) количество найденных уязвимостей XSS в приложениях, написанных на PHP составило:
 
 в 2021 году - 378, или 1,88% от общего числа уязвимостей (20158)
 
@@ -15,7 +17,7 @@
 
 
 
-# II. Практическая часть.
+### II. Практическая часть.
 
 Запустим тестовый стенд.
 
