@@ -46,7 +46,6 @@ https://github.com/OWASP/Top10
 | Категория              | Доля по оценке <br />[Positive Technologies](https://www.ptsecurity.com/ru-ru/research/analytics/cybersecurity-threatscape-2022) |
 | ---------------------- | :----------------------------------------------------------: |
 | Госучреждения          |                             41%                              |
-| Медицинские учреждения |                              -                               |
 | Наука и образование    |                             20%                              |
 | IT-компании            |                             22%                              |
 | Сфера услуг            |                             35%                              |
