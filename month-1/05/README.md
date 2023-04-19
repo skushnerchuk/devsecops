@@ -127,10 +127,6 @@ http://localhost:8080/XSS-1/#alert('Surprise!')
 
 Относительно новый и достаточно опасный вектор атак. Заключается в том, что безопасный с точки зрения HTML-санитайзеров пользовательского ввода скрипт, после его обработки превращается во вредоносный. 
 
-Примеры атаки с использованием этого метода для [Firefox](https://portswigger-labs.net/mxss/?input=%3Cmath%3E%3Cmtext%3E%3Ctable%3E%3Cmglyph%3E%3Cstyle%3E%3C![CDATA[%3C/style%3E%3Cimg%20title=%22]]%26gt;%26lt;/mglyph%26gt;%26lt;img%26Tab;src=1%26Tab;onerror=alert(1)%26gt;%22%3E) и [Chrome-based](https://portswigger-labs.net/mxss/?input=%3Cmath%3E%3Cmtext%3E%3Ctable%3E%3Cmglyph%3E%3Cstyle%3E%3C!--%3C/style%3E%3Cimg%20title=%22--%26gt;%26lt;img%20src=1%20onerror=alert(1)%26gt;%22%3E) браузеров.
-
-
-
 ### Основные технические способы противодействия XSS-атакам.
 
 Экранирование входных и выходных данных, по возможности избегая самописных решений - лучше использовать или штатные средства языка, или популярные проверенные библиотеки (например, для PHP это Reform или HTML Purifier), отсекая HTML-теги и другие потенциально опасные данные.
