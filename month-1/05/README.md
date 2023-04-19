@@ -49,9 +49,9 @@ My first comment!<script>alert("Congratulations! You was hacked!")</script>
 ```javascript
 <script> 
     const params = new URLSearchParams(window.location.search); 
-    const attack= params.get("attack"); 
-    if(attack==="true") { 
-        window.location.href="https://google.com" 
+    const attack = params.get("attack"); 
+    if(attack === "true") { 
+        window.location.href="https://google.com";
     }; 
 </script>
 ```
@@ -105,7 +105,7 @@ http://localhost:8080/XSS-1/#alert('Surprise!')
 
 ![surprise](./images/surprise.png)
 
-Особенностью DOM-based атак является то, что они выполняются исключительно на стороне клиента. Это достигается за счет использования символа **#** в ссылке, так как все что находится после него отрезается и на сервер не передается, но доступно в JavaScript на клиенте. То есть в нашем случае для выполнения любых операций, на которые способен JavaScript, нам достаточно только 1 зараженного комментария.
+Особенностью DOM-based атак является то, что они выполняются исключительно на стороне клиента, без задействования бэкенда приложения. Например, за счет использования символа **#** в ссылке мы можем выполнить любой скрипт, так как все что находится после него отрезается и на сервер не передается, но доступно в JavaScript на клиенте. То есть в нашем случае для выполнения любых операций, на которые способен JavaScript, нам достаточно только 1 зараженного комментария.
 
 #### Blind XSS
 
