@@ -77,7 +77,7 @@ http://localhost:8080/ui/?url=https://jumpy-floor.surge.sh/test.yaml
 
 ![swagger-exploit](./images/swagger-exploit.png)
 
-Приложение представляет нам две интересующих нас группы эндпойнтов - books иerver: Werkzeug/1.0.1 Python/3.7 users, будем исследовать их по очереди.
+Приложение представляет нам две интересующих нас группы эндпойнтов - books и users, будем исследовать их по очереди.
 
 #### Группа USERS
 
