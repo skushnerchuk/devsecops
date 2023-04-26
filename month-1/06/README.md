@@ -76,7 +76,7 @@
 Еще одним вариантом такой атаки может быть попытка чтения условно бесконечного файла:
 
 ```xml
-<!ENTITY xxe SYSTEM "file:///dev/random" >]>
+<!ENTITY xxe SYSTEM "file:///dev/urandom" >]>
 ```
 
 **Доступ к файлам.**
