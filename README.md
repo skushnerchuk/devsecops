@@ -9,3 +9,5 @@
 Занятие № 4. [Разбор уязвимостей OWASP Top 10 - REST API](https://github.com/skushnerchuk/devsecops/tree/master/month-1/04)
 
 Занятие № 5. [Безопасная разработка в HTML/CSS и PHP](https://github.com/skushnerchuk/devsecops/tree/master/month-1/05)
+
+Занятие № 6. [Безопасная разработка в Java/Node.js](https://github.com/skushnerchuk/devsecops/tree/master/month-1/06)
