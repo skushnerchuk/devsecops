@@ -101,7 +101,7 @@ AttributeError: 'NoneType' object has no attribute 'lower'
 email = email.strip().lower()
 ```
 
-Эта строка подвержена проблемам, аналогичным упомянутым выше, а также здесь адрес электронной почты приводится к нижнему регистра, что может вызвать проблемы на некоторых почтовых хостингах.
+Эта строка подвержена проблемам, аналогичным упомянутым выше, а также здесь адрес электронной почты приводится к нижнему регистру, что может вызвать проблемы на некоторых почтовых хостингах.
 
 В соответствии с [RFC-5321](https://www.rfc-editor.org/rfc/rfc5321#section-2.3.11) семантика локальной части (до символа @) определяется и интерпретируется исключительно хостом, тогда как доменная часть (после символа @) должна сравниваться без учета регистра в соответствии с [RFC-1035](https://www.rfc-editor.org/rfc/rfc1035). То есть может случится так, что пользователь никогда не получит писем от нашего сервиса.
 
@@ -158,7 +158,7 @@ def post(self):
         user.password = strong_hash(password)
         save_user(self.db_conn, user)
         return self.render_template("success_create.html")
-    except (DBException, UserValidateException) as e:
+    except (DBException, UserValidateException):
         return self.render_template("fail_create.html")
 ```
 
