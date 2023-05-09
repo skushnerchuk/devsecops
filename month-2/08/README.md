@@ -259,7 +259,7 @@ Django предоставляет полную поддержку пользов
 
 Сеансы реализуются с помощью [middleware](https://docs.djangoproject.com/en/4.2/ref/middleware/).
 
-Чтобы включить функциональность сеанса, необходимо отредактировать переменную [MIDDLEWARE](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-MIDDLEWARE), установив значение в `django.contrib.sessions.middleware.SessionMiddleware`.
+Чтобы включить функциональность сеанса, необходимо отредактировать переменную [MIDDLEWARE](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-MIDDLEWARE), добавив значение `django.contrib.sessions.middleware.SessionMiddleware`.
 
 **Настройка механизма сеансов**
 
@@ -281,7 +281,7 @@ Django предоставляет полную поддержку пользов
 
 Чтобы использовать сессии на основе файлов, в переменной [SESSION_ENGINE](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SESSION_ENGINE) нужно установить значение `"django.contrib.sessions.backends.file"`.
 
-Также в переменной [SESSION_FILE_PATH](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SESSION_FILE_PATH) можно установить путь к директории, где будут хранится файлы сессии. Соответственно, веб-сервер должен иметь разрешения на чтение и запись в эту папку.
+Также в переменной [SESSION_FILE_PATH](https://docs.djangoproject.com/en/4.2/ref/settings/#std-setting-SESSION_FILE_PATH) можно установить путь к директории, где будут хранится файлы сессии. Соответственно, веб-сервер должен иметь разрешения на чтение и запись в эту директорию.
 
 **Сессии на основе cookie**
 
