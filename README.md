@@ -13,3 +13,5 @@
 Занятие № 6. [Безопасная разработка в Java/Node.js](https://github.com/skushnerchuk/devsecops/tree/master/month-1/06)
 
 Занятие № 8 [Безопасная разработка в Python](https://github.com/skushnerchuk/devsecops/tree/master/month-2/08)
+
+Занятие № 16 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/16)
