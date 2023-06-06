@@ -15,7 +15,7 @@ docker pull mariadb:10.3
 Посмотрим список образов, которые есть на данный момент (на скриншоте скрыты некоторые служебные образы):
 
 ```
-docker images
+docker image ls
 ```
 
 ![docker_images](./images/docker_images.png)
