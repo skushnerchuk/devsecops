@@ -1,0 +1,3 @@
+FROM mariadb:10.3
+RUN useradd -rm -d /home/user -s /bin/bash -g users -u 1001 user
+USER user

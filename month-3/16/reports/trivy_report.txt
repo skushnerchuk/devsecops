@@ -1,0 +1,349 @@
+2023-06-05T23:03:58.001+0300    INFO    Vulnerability scanning is enabled
+2023-06-05T23:03:58.001+0300    INFO    Secret scanning is enabled
+2023-06-05T23:03:58.001+0300    INFO    If your scanning is slow, please try '--scanners vuln' to disable secret scanning
+2023-06-05T23:03:58.001+0300    INFO    Please see also https://aquasecurity.github.io/trivy/v0.42/docs/secret/scanning/#recommendation for faster secret detection
+2023-06-05T23:03:58.007+0300    INFO    Detected OS: ubuntu
+2023-06-05T23:03:58.007+0300    INFO    Detecting Ubuntu vulnerabilities...
+2023-06-05T23:03:58.011+0300    INFO    Number of language-specific files: 1
+2023-06-05T23:03:58.011+0300    INFO    Detecting gobinary vulnerabilities...
+
+noroot_mariadb:latest (ubuntu 20.04)
+====================================
+Total: 80 (UNKNOWN: 0, LOW: 40, MEDIUM: 40, HIGH: 0, CRITICAL: 0)
+
+┌──────────────────────────┬────────────────┬──────────┬──────────────────────────┬────────────────────┬──────────────────────────────────────────────────────────────┐
+│         Library          │ Vulnerability  │ Severity │    Installed Version     │   Fixed Version    │                            Title                             │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ coreutils                │ CVE-2016-2781  │ LOW      │ 8.30-3ubuntu2            │                    │ coreutils: Non-privileged session can escape to the parent   │
+│                          │                │          │                          │                    │ session in chroot                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2016-2781                    │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ gpg                      │ CVE-2022-3219  │          │ 2.2.19-3ubuntu2.2        │                    │ denial of service issue (resource consumption) using         │
+│                          │                │          │                          │                    │ compressed packets                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-3219                    │
+├──────────────────────────┤                │          │                          ├────────────────────┤                                                              │
+│ gpgconf                  │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+├──────────────────────────┤                │          │                          ├────────────────────┤                                                              │
+│ gpgv                     │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libc-bin                 │ CVE-2016-20013 │          │ 2.31-0ubuntu9.9          │                    │ sha256crypt and sha512crypt through 0.6 allow attackers to   │
+│                          │                │          │                          │                    │ cause a denial of...                                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2016-20013                   │
+├──────────────────────────┤                │          │                          ├────────────────────┤                                                              │
+│ libc6                    │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcap2                  │ CVE-2023-2603  │ MEDIUM   │ 1:2.32-1                 │                    │ Integer Overflow in _libcap_strdup()                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2603                    │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-2602  │ LOW      │                          │                    │ Memory Leak on pthread_create() Error                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2602                    │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libcap2-bin              │ CVE-2023-2603  │ MEDIUM   │                          │                    │ Integer Overflow in _libcap_strdup()                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2603                    │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-2602  │ LOW      │                          │                    │ Memory Leak on pthread_create() Error                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2602                    │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libmariadb3              │ CVE-2021-27928 │ MEDIUM   │ 1:10.3.39+maria~ubu2004  │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libncurses6              │ CVE-2023-29491 │ MEDIUM   │ 6.2-0ubuntu2             │ 6.2-0ubuntu2.1     │ Local users can trigger security-relevant memory corruption  │
+│                          │                │          │                          │                    │ via malformed data                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                          ├────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39537 │ LOW      │                          │                    │ ncurses: heap-based buffer overflow in _nc_captoinfo() in    │
+│                          │                │          │                          │                    │ captoinfo.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-39537                   │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-29458 │          │                          │                    │ ncurses: segfaulting OOB read                                │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+├──────────────────────────┼────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│ libncursesw6             │ CVE-2023-29491 │ MEDIUM   │                          │                    │ Local users can trigger security-relevant memory corruption  │
+│                          │                │          │                          │                    │ via malformed data                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                          ├────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39537 │ LOW      │                          │                    │ ncurses: heap-based buffer overflow in _nc_captoinfo() in    │
+│                          │                │          │                          │                    │ captoinfo.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-39537                   │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-29458 │          │                          │                    │ ncurses: segfaulting OOB read                                │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libpcre3                 │ CVE-2017-11164 │          │ 2:8.39-12ubuntu0.1       │                    │ pcre: OP_KETRMAX feature in the match function in            │
+│                          │                │          │                          │                    │ pcre_exec.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2017-11164                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libperl5.30              │ CVE-2023-31484 │ MEDIUM   │ 5.30.0-9ubuntu0.3        │ 5.30.0-9ubuntu0.4  │ CPAN.pm before 2.35 does not verify TLS certificates when    │
+│                          │                │          │                          │                    │ downloading ......                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-31484                   │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libssl1.1                │ CVE-2023-2650  │          │ 1.1.1f-1ubuntu2.17       │ 1.1.1f-1ubuntu2.19 │ Possible DoS translating ASN.1 object identifiers            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2650                    │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0464  │ LOW      │                          │ 1.1.1f-1ubuntu2.18 │ Denial of service by excessive resource usage in verifying   │
+│                          │                │          │                          │                    │ X509 policy constraints...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0464                    │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0465  │          │                          │                    │ Invalid certificate policies in leaf certificates are        │
+│                          │                │          │                          │                    │ silently ignored                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0465                    │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0466  │          │                          │                    │ Certificate policy check not enabled                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0466                    │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libsystemd0              │ CVE-2023-26604 │          │ 245.4-4ubuntu3.21        │                    │ privilege escalation via the less pager                      │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-26604                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libtinfo6                │ CVE-2023-29491 │ MEDIUM   │ 6.2-0ubuntu2             │ 6.2-0ubuntu2.1     │ Local users can trigger security-relevant memory corruption  │
+│                          │                │          │                          │                    │ via malformed data                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                          ├────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39537 │ LOW      │                          │                    │ ncurses: heap-based buffer overflow in _nc_captoinfo() in    │
+│                          │                │          │                          │                    │ captoinfo.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-39537                   │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-29458 │          │                          │                    │ ncurses: segfaulting OOB read                                │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ libudev1                 │ CVE-2023-26604 │          │ 245.4-4ubuntu3.21        │                    │ privilege escalation via the less pager                      │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-26604                   │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ login                    │ CVE-2013-4235  │          │ 1:4.8.1-1ubuntu5.20.04.4 │                    │ shadow-utils: TOCTOU race conditions by copying and removing │
+│                          │                │          │                          │                    │ directory trees                                              │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2013-4235                    │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-29383 │          │                          │                    │ Improper input validation in shadow-utils package utility    │
+│                          │                │          │                          │                    │ chfn                                                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29383                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-backup           │ CVE-2021-27928 │ MEDIUM   │ 1:10.3.39+maria~ubu2004  │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-client-10.3      │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-client-core-10.3 │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-common           │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-server           │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-server-10.3      │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mariadb-server-core-10.3 │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│ mysql-common             │ CVE-2021-27928 │ MEDIUM   │                          │                    │ mariadb: writable system variables allows a database user    │
+│                          │                │          │                          │                    │ with SUPER privilege to...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-27928                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46662 │          │                          │                    │ mariadb: Crash in set_var.cc via certain UPDATE queries with │
+│                          │                │          │                          │                    │ nested subqueries                                            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46662                   │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46666 │          │                          │                    │ mariadb: Crash caused by mishandling of a pushdown from a    │
+│                          │                │          │                          │                    │ HAVING clause...                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46666                   │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-46667 │ LOW      │                          │                    │ mariadb: Integer overflow in sql_lex.cc integer leading to   │
+│                          │                │          │                          │                    │ crash                                                        │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-46667                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ ncurses-base             │ CVE-2023-29491 │ MEDIUM   │ 6.2-0ubuntu2             │ 6.2-0ubuntu2.1     │ Local users can trigger security-relevant memory corruption  │
+│                          │                │          │                          │                    │ via malformed data                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                          ├────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39537 │ LOW      │                          │                    │ ncurses: heap-based buffer overflow in _nc_captoinfo() in    │
+│                          │                │          │                          │                    │ captoinfo.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-39537                   │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-29458 │          │                          │                    │ ncurses: segfaulting OOB read                                │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+├──────────────────────────┼────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│ ncurses-bin              │ CVE-2023-29491 │ MEDIUM   │                          │                    │ Local users can trigger security-relevant memory corruption  │
+│                          │                │          │                          │                    │ via malformed data                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29491                   │
+│                          ├────────────────┼──────────┤                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2021-39537 │ LOW      │                          │                    │ ncurses: heap-based buffer overflow in _nc_captoinfo() in    │
+│                          │                │          │                          │                    │ captoinfo.c                                                  │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2021-39537                   │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2022-29458 │          │                          │                    │ ncurses: segfaulting OOB read                                │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2022-29458                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ openssl                  │ CVE-2023-2650  │ MEDIUM   │ 1.1.1f-1ubuntu2.17       │ 1.1.1f-1ubuntu2.19 │ Possible DoS translating ASN.1 object identifiers            │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-2650                    │
+│                          ├────────────────┼──────────┤                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0464  │ LOW      │                          │ 1.1.1f-1ubuntu2.18 │ Denial of service by excessive resource usage in verifying   │
+│                          │                │          │                          │                    │ X509 policy constraints...                                   │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0464                    │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0465  │          │                          │                    │ Invalid certificate policies in leaf certificates are        │
+│                          │                │          │                          │                    │ silently ignored                                             │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0465                    │
+│                          ├────────────────┤          │                          │                    ├──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-0466  │          │                          │                    │ Certificate policy check not enabled                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-0466                    │
+├──────────────────────────┼────────────────┤          ├──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ passwd                   │ CVE-2013-4235  │          │ 1:4.8.1-1ubuntu5.20.04.4 │                    │ shadow-utils: TOCTOU race conditions by copying and removing │
+│                          │                │          │                          │                    │ directory trees                                              │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2013-4235                    │
+│                          ├────────────────┤          │                          ├────────────────────┼──────────────────────────────────────────────────────────────┤
+│                          │ CVE-2023-29383 │          │                          │                    │ Improper input validation in shadow-utils package utility    │
+│                          │                │          │                          │                    │ chfn                                                         │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-29383                   │
+├──────────────────────────┼────────────────┼──────────┼──────────────────────────┼────────────────────┼──────────────────────────────────────────────────────────────┤
+│ perl                     │ CVE-2023-31484 │ MEDIUM   │ 5.30.0-9ubuntu0.3        │ 5.30.0-9ubuntu0.4  │ CPAN.pm before 2.35 does not verify TLS certificates when    │
+│                          │                │          │                          │                    │ downloading ......                                           │
+│                          │                │          │                          │                    │ https://avd.aquasec.com/nvd/cve-2023-31484                   │
+├──────────────────────────┤                │          │                          │                    │                                                              │
+│ perl-base                │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+├──────────────────────────┤                │          │                          │                    │                                                              │
+│ perl-modules-5.30        │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+│                          │                │          │                          │                    │                                                              │
+└──────────────────────────┴────────────────┴──────────┴──────────────────────────┴────────────────────┴──────────────────────────────────────────────────────────────┘
+
+usr/local/bin/gosu (gobinary)
+=============================
+Total: 6 (UNKNOWN: 0, LOW: 1, MEDIUM: 4, HIGH: 1, CRITICAL: 0)
+
+┌────────────────────────────────┬────────────────┬──────────┬────────────────────────────────────┬───────────────────────────────────┬────────────────────────────────────────────────────────────┐
+│            Library             │ Vulnerability  │ Severity │         Installed Version          │           Fixed Version           │                           Title                            │
+├────────────────────────────────┼────────────────┼──────────┼────────────────────────────────────┼───────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ github.com/opencontainers/runc │ CVE-2023-27561 │ HIGH     │ v1.0.1                             │ 1.1.5                             │ volume mount race condition (regression of CVE-2019-19921) │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2023-27561                 │
+│                                ├────────────────┼──────────┤                                    ├───────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│                                │ CVE-2021-43784 │ MEDIUM   │                                    │ 1.1.0                             │ runc: integer overflow in netlink bytemsg length field     │
+│                                │                │          │                                    │                                   │ allows attacker to override...                             │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2021-43784                 │
+│                                ├────────────────┤          │                                    ├───────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│                                │ CVE-2022-29162 │          │                                    │ 1.1.2                             │ runc: incorrect handling of inheritable capabilities       │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2022-29162                 │
+│                                ├────────────────┤          │                                    ├───────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│                                │ CVE-2023-28642 │          │                                    │ 1.1.5                             │ AppArmor can be bypassed when `/proc` inside the container │
+│                                │                │          │                                    │                                   │ is symlinked with...                                       │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2023-28642                 │
+│                                ├────────────────┼──────────┤                                    │                                   ├────────────────────────────────────────────────────────────┤
+│                                │ CVE-2023-25809 │ LOW      │                                    │                                   │ Rootless runc makes `/sys/fs/cgroup` writable              │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2023-25809                 │
+├────────────────────────────────┼────────────────┼──────────┼────────────────────────────────────┼───────────────────────────────────┼────────────────────────────────────────────────────────────┤
+│ golang.org/x/sys               │ CVE-2022-29526 │ MEDIUM   │ v0.0.0-20210817142637-7d9622a276b7 │ 0.0.0-20220412211240-33da011f77ad │ faccessat checks wrong group                               │
+│                                │                │          │                                    │                                   │ https://avd.aquasec.com/nvd/cve-2022-29526                 │
+└────────────────────────────────┴────────────────┴──────────┴────────────────────────────────────┴───────────────────────────────────┴────────────────────────────────────────────────────────────┘
