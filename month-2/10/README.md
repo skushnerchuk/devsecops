@@ -1,12 +1,16 @@
 ## Безопасная разработка и уязвимости программного кода
 
+Рассмотрим несколько примеров, содержащих те или иные типы уязвимостей. В таблице ниже представлен результат анализа
+
 | Имя файла                  | Номер строки | Тип уязвимости                                               |
 | -------------------------- | ------------ | ------------------------------------------------------------ |
 | [board.c](./src/board.c)   | 36           | [Memory leak](https://owasp.org/www-community/vulnerabilities/Memory_leak) |
 | [free.c](./src/free.c)     | 8            | [Doubly freeing memory](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory) |
 | [html.c](./src/html.c)     | 22           | [Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow) |
-| [packet.c](./src/packet.c) | 22           | [Doubly freeing memory](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory) |
+| [packet.c](./src/packet.c) | 38           | [Doubly freeing memory](https://owasp.org/www-community/vulnerabilities/Doubly_freeing_memory) |
 | [print.c](./src/print.c)   | 12           | [Buffer Overflow](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow) |
+
+Ниже представлены отчеты статического и динамического анализа по всем примерам:
 
 #### [board.c](./src/board.c)
 
