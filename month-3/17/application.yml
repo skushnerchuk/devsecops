@@ -1,0 +1,85 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: db
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: db
+  template:
+    metadata:
+      labels:
+        app: db
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": linux
+      containers:
+      - name: db
+        image: mysql:5.7
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: "Vdjo7#l-er"
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 3306
+          name: mysql
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: db
+spec:
+  ports:
+  - port: 3306
+  selector:
+    app: db
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devsecops-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devsecops-front
+  template:
+    metadata:
+      labels:
+        app: devsecops-front
+    spec:
+      nodeSelector:
+        "kubernetes.io/os": linux
+      containers:
+      - name: devsecops-front
+        image: ket9/otus-devsecops:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 250m
+            memory: 256Mi
+        ports:
+        - containerPort: 80
+        env:
+        - name: MYSQL
+          value: "devsecops-db"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devsecops-front
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: devsecops-front

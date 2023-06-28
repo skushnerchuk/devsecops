@@ -14,4 +14,6 @@
 
 Занятие № 8 [Безопасная разработка в Python](https://github.com/skushnerchuk/devsecops/tree/master/month-2/08)
 
+Занятие № 10 [Безопасная разработка и уязвимости программного кода](https://github.com/skushnerchuk/devsecops/tree/master/month-2/10)
+
 Занятие № 16 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/16)
