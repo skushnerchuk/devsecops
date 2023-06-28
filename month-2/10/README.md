@@ -61,7 +61,7 @@ Please specify the board width:
 
 Direct leak of 100 byte(s) in 1 object(s) allocated from:
     #0 0x7f3832cdecaf in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:69
-    #1 0x55ebcf9be5e3 in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/board.c:36
+    #1 0x55ebcf9be5e3 in main /src/board.c:36
     #2 0x7f3832823a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: 100 byte(s) leaked in 1 allocation(s).
@@ -72,19 +72,19 @@ SUMMARY: AddressSanitizer: 100 byte(s) leaked in 1 allocation(s).
 **clang-tidy report**
 
 ```
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:8:5: warning: Attempt to free released memory [clang-analyzer-unix.Malloc]
+/src/free.c:8:5: warning: Attempt to free released memory [clang-analyzer-unix.Malloc]
     free(ptr);
     ^~~~~~~~~
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:4:24: note: Memory is allocated
+/src/free.c:4:24: note: Memory is allocated
     char* ptr = (char*)malloc (SIZE);
                        ^~~~~~~~~~~~~
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:5:5: note: Taking true branch
+/src/free.c:5:5: note: Taking true branch
     if (1) {
     ^
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:6:9: note: Memory is released
+/src/free.c:6:9: note: Memory is released
         free(ptr);
         ^~~~~~~~~
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:8:5: note: Attempt to free released memory
+/src/free.c:8:5: note: Attempt to free released memory
     free(ptr);
 ```
 
@@ -94,20 +94,20 @@ SUMMARY: AddressSanitizer: 100 byte(s) leaked in 1 allocation(s).
 =================================================================
 ==76390==ERROR: AddressSanitizer: attempting double-free on 0x602000000010 in thread T0:
     #0 0x7f399c0dd7f0 in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52
-    #1 0x55866fa8e1da in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:8
+    #1 0x55866fa8e1da in main /src/free.c:8
     #2 0x7f399bc23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
     #3 0x7f399bc23b48 in __libc_start_main_impl ../csu/libc-start.c:360
-    #4 0x55866fa8e0e4 in _start (/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free+0x10e4) (BuildId: 4efac1f8fbab81721aaf30672a8df78fd0aee786)
+    #4 0x55866fa8e0e4 in _start (/src/free+0x10e4) (BuildId: 4efac1f8fbab81721aaf30672a8df78fd0aee786)
 
 0x602000000010 is located 0 bytes inside of 16-byte region [0x602000000010,0x602000000020)
 freed by thread T0 here:
     #0 0x7f399c0dd7f0 in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52
-    #1 0x55866fa8e1ce in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:6
+    #1 0x55866fa8e1ce in main /src/free.c:6
     #2 0x7f399bc23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 previously allocated by thread T0 here:
     #0 0x7f399c0decaf in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:69
-    #1 0x55866fa8e1be in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/free.c:4
+    #1 0x55866fa8e1be in main /src/free.c:4
     #2 0x7f399bc23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: double-free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52 in __interceptor_free
@@ -128,20 +128,20 @@ SUMMARY: AddressSanitizer: double-free ../../../../src/libsanitizer/asan/asan_ma
 =================================================================
 ==77017==ERROR: AddressSanitizer: heap-buffer-overflow on address 0x6060000000c0 at pc 0x560a0611147d bp 0x7ffd021eb940 sp 0x7ffd021eb930
 WRITE of size 1 at 0x6060000000c0 thread T0
-    #0 0x560a0611147c in copy_input /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html.c:22
-    #1 0x560a061116ac in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html.c:38
+    #0 0x560a0611147c in copy_input /src/html.c:22
+    #1 0x560a061116ac in main /src/html.c:38
     #2 0x7f3058a23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
     #3 0x7f3058a23b48 in __libc_start_main_impl ../csu/libc-start.c:360
-    #4 0x560a061111a4 in _start (/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html+0x11a4) (BuildId: 02f3de687da42b0ca84cda4b31f5f504148481c5)
+    #4 0x560a061111a4 in _start (/src/html+0x11a4) (BuildId: 02f3de687da42b0ca84cda4b31f5f504148481c5)
 
 0x6060000000c0 is located 0 bytes after 64-byte region [0x606000000080,0x6060000000c0)
 allocated by thread T0 here:
     #0 0x7f3058edecaf in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:69
-    #1 0x560a06111283 in copy_input /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html.c:11
-    #2 0x560a061116ac in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html.c:38
+    #1 0x560a06111283 in copy_input /src/html.c:11
+    #2 0x560a061116ac in main /src/html.c:38
     #3 0x7f3058a23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
-SUMMARY: AddressSanitizer: heap-buffer-overflow /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/html.c:22 in copy_input
+SUMMARY: AddressSanitizer: heap-buffer-overflow /src/html.c:22 in copy_input
 Shadow bytes around the buggy address:
   0x605ffffffe00: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
   0x605ffffffe80: 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
@@ -181,7 +181,7 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 **clang-tidy report**
 
 ```
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/packet.c:8:10: warning: implicit conversion from 'long' to 'int' changes value from 12073741824 to -811160064 [clang-diagnostic-constant-conversion]
+/src/packet.c:8:10: warning: implicit conversion from 'long' to 'int' changes value from 12073741824 to -811160064 [clang-diagnostic-constant-conversion]
   return 12073741824;
   ~~~~~~ ^~~~~~~~~~~
 ```
@@ -192,20 +192,20 @@ Shadow byte legend (one shadow byte represents 8 application bytes):
 =================================================================
 ==77633==ERROR: AddressSanitizer: attempting double-free on 0x7fa3a900d800 in thread T0:
     #0 0x7fa3a9add7f0 in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52
-    #1 0x55730810735e in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/packet.c:2299
+    #1 0x55730810735e in main /src/packet.c:2299
     #2 0x7fa3a9623a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
     #3 0x7fa3a9623b48 in __libc_start_main_impl ../csu/libc-start.c:360
-    #4 0x557308107144 in _start (/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/packet+0x1144) (BuildId: f7e00ea2a8bdc0f08b642a50a1633912a684a903)
+    #4 0x557308107144 in _start (/src/packet+0x1144) (BuildId: f7e00ea2a8bdc0f08b642a50a1633912a684a903)
 
 0x7fa3a900d800 is located 0 bytes inside of 987648-byte region [0x7fa3a900d800,0x7fa3a90fea00)
 freed by thread T0 here:
     #0 0x7fa3a9add7f0 in __interceptor_free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52
-    #1 0x5573081072d3 in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/packet.c:22
+    #1 0x5573081072d3 in main /src/packet.c:22
     #2 0x7fa3a9623a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 previously allocated by thread T0 here:
     #0 0x7fa3a9adecaf in __interceptor_malloc ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:69
-    #1 0x55730810726c in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/packet.c:19
+    #1 0x55730810726c in main /src/packet.c:19
     #2 0x7fa3a9623a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
 
 SUMMARY: AddressSanitizer: double-free ../../../../src/libsanitizer/asan/asan_malloc_linux.cpp:52 in __interceptor_free
@@ -217,17 +217,17 @@ SUMMARY: AddressSanitizer: double-free ../../../../src/libsanitizer/asan/asan_ma
 **clang-tidy report**
 
 ```
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:7:12: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
+/src/print.c:7:12: warning: format string is not a string literal (potentially insecure) [clang-diagnostic-format-security]
     printf(string);
            ^~~~~~
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:7:12: note: treat the string as an argument to avoid this
+/src/print.c:7:12: note: treat the string as an argument to avoid this
     printf(string);
            ^
            "%s", 
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:12:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+/src/print.c:12:5: warning: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11 [clang-analyzer-security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
     memcpy(buf, argv[1], 5012);
     ^~~~~~
-/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:12:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
+/src/print.c:12:5: note: Call to function 'memcpy' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'memcpy_s' in case of C11
     memcpy(buf, argv[1], 5012);
     ^~~~~~
 ```
@@ -240,13 +240,13 @@ AddressSanitizer:DEADLYSIGNAL
 ==78460==ERROR: AddressSanitizer: SEGV on unknown address 0x000000000000 (pc 0x55960797b485 bp 0x7fffa520b950 sp 0x7fffa520a440 T0)
 ==78460==The signal is caused by a READ memory access.
 ==78460==Hint: address points to the zero page.
-    #0 0x55960797b485 in main /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:12
+    #0 0x55960797b485 in main /src/print.c:12
     #1 0x7f6b1de23a8f in __libc_start_call_main ../sysdeps/nptl/libc_start_call_main.h:58
     #2 0x7f6b1de23b48 in __libc_start_main_impl ../csu/libc-start.c:360
-    #3 0x55960797b184 in _start (/media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print+0x1184) (BuildId: 13bd5f83e73feb26228d597e5a31cc3bdfe2903e)
+    #3 0x55960797b184 in _start (/src/print+0x1184) (BuildId: 13bd5f83e73feb26228d597e5a31cc3bdfe2903e)
 
 AddressSanitizer can not provide additional info.
-SUMMARY: AddressSanitizer: SEGV /media/sergey/data/dev/otus/DevSecOps-2023-03/month-2/10/src/print.c:12 in main
+SUMMARY: AddressSanitizer: SEGV /src/print.c:12 in main
 ==78460==ABORTING
 ```
 
