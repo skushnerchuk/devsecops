@@ -18,4 +18,4 @@
 
 Занятие № 16 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/15)
 
-Занятие № 19 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/19)
+Занятие № 19 [Обеспечение безопасности CI/CD тулчейна и DevOps процесса](https://github.com/skushnerchuk/devsecops/tree/master/month-3/19)
