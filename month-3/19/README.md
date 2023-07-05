@@ -1,45 +1,97 @@
 ##  Обеспечение безопасности CI/CD тулчейна и DevOps процесса
 
+В качестве инструментов будем использовать TruffleHog и как альтернативу для сравнения результатов - GitLeaks.
+
+В задании указано использование python-варианта TruffleHog, его репозиторий указан такой:
+https://github.com/dxa4481/truffleHog
+
+В настоящее время это редирект на go-версию сканера:
+https://github.com/trufflesecurity/trufflehog
+
+Также есть расширенная версия питоновского TruffleHog
+https://github.com/feeltheajf/trufflehog3
+
+Попробуем использование всех трех вариантов.
+
+
+
+#### TruffleHog
+
+Последнее обновление на момент написания - [5 февраля 2021 года](https://pypi.org/project/truffleHog/).
+
+```bash
+trufflehog https://github.com/OtusTeam/DevSecOps_secret-finding.git > th_git.log 
+```
+
+Размер [итогового лога](logs/trufflehog.tar.gz) - 42 Мб. Очень сложен в анализе, не имеет нормальной структуры.
+
+
+
+#### TruffleHog3
+
+Последнее обновление на момент написания - [19 января 2023 года](https://pypi.org/project/trufflehog3/).
+
+```bash
+trufflehog3 --no-entropy -f text -o th3_git.log https://github.com/OtusTeam/DevSecOps_secret-finding.git
+```
+
+Размер [итогового лога](logs/trufflehog3.tar.gz) - 57,9 Мб. Очень сложен в анализе, не имеет нормальной структуры.
+
+
+
+#### TruffleHog Go (замена TruffleHog)
+
+Последнее обновление на момент написания - [28 июня 2023 года](https://github.com/trufflesecurity/trufflehog/tree/v3.42.0).
+
 Запустим процесс поиска 
 
 ```bash
 trufflehog git https://github.com/OtusTeam/DevSecOps_secret-finding.git | tee -a log.txt
 ```
 
-В результате проверки найдено 38 
+Размер  [итогового лога](logs/trufflehog_go.log) - 16,4 Кб. Хорошо структурирован, прост в анализе.
 
-**Detector Type: JDBC**
-Raw result: jdbc:postgresql://webgoat_db:5432/webgoat?user=webgoat&password=webgoat
-Commit: bc0d803123f5cd5e3f3e857398b8f2b0c4aad5b9
-File: docker-compose-postgres.yml
-Line: 10
 
-**Detector Type: PrivateKey**
-Raw result: -----BEGIN PRIVATE KEY-----
-...
------END PRIVATE KEY-----
-Commit: 34f1faad298b13e515a62330f593dac142506789
-File: webgoat-server/privatekey.key
-Line: 1
 
-**Detector Type: SQLServer**
-Raw result: Mot de passe
-Login=Login
-RequiredFields=Champs obligatoires
-WeakAuthenticationCookiePleaseSignIn=Veuillez vous connecter \u00e0 votre compte. Contactez l
-Commit: 05c0c0342ededd9b749de5741636b2b6c4fe3c46
-File: src/main/resources/WebGoatLabels_fr.properties
-Line: 1
+#### GitLeaks
 
-**Detector Type: URI**
-Raw result: http://guest:guest@127.0.0.1
-Commit: 68b80fa14f8c2ece71df20ac0a3e3e710bbcd368
-File: webgoat-5.4/src/main/scripts/webgoat.sh
-Line: 43
+Последнее обновление на момент написания - [14 июня 2023 года](https://github.com/gitleaks/gitleaks/tree/v8.17.0).
 
-**Detector Type: AWS**
-Raw result: AKIAJQLKPGHXRH2AH5QA
-Commit: faeb5b1b2486d5b613a55d8730e00b43923683d8
-File: .travis.yml
-Line: 20
+Запустим процесс поиска 
 
+```bash
+/gitleaks detect --source ./DevSecOps_secret-finding --verbose --no-banner --no-color
+```
+
+Размер  [итогового лога](logs/gitleaks.log)  - 33,6 Кб. Хорошо структурирован, прост в анализе.
+
+
+
+------
+
+
+
+### Итоговый результат:
+
+| Файл                                                     | Коммит                                   | Строка | Тип           | Предпочтительный способ хранения                             |
+| -------------------------------------------------------- | ---------------------------------------- | ------ | ------------- | ------------------------------------------------------------ |
+| .github/workflows/release.yml                            | 34f1faad298b13e515a62330f593dac142506789 | 75     | Access token  | [Секреты или контекст GitHub](https://docs.github.com/en/actions/security-guides/automatic-token-authentication) |
+| webgoat-server/privatekey.key                            | 34f1faad298b13e515a62330f593dac142506789 | -      | Private key   | Переменные окружения или внешнее хранилище секретов, также необходимо установить на ключ пароль, который тоже не должен храниться в репозитории |
+| .travis.yml                                              | faeb5b1b2486d5b613a55d8730e00b43923683d8 | 20     | AWS Key       | Переменные окружения или внешнее хранилище секретов          |
+| docker-compose-postgres.yml                              | bc0d803123f5cd5e3f3e857398b8f2b0c4aad5b9 | 10     | DB Password   | Переменные окружения                                         |
+| webgoat-lessons/jwt/src/main/resources/js/jwt-refresh.js | dda6f674a3e8a87c3c9df1983895d372d4221fea | 10     | User password | Пароль должен передаваться в функцию как аргумент            |
+
+#### [BFG Repo-Cleaner](https://rtyley.github.io/bfg-repo-cleaner/)
+
+BFG - это  более быстрый и простой способ (чем git-filter-branch) удаления больших файлов, паролей, учетных и других чувствительных данных из репозитория. Это перепишет полную историю фиксации, т. е. все ссылки на хэши фиксации, ветви / теги будут изменены без вмешательства в сообщение о фиксации и названия ветвей.
+
+### Как можно автоматизировать процесс поиска секретов и насколько это правильный подход
+
+Автоматизация поиска секретов имеет в себе ряд ограничений, исключающих полное доверие этому процессу:
+
+- наличие ложноположительных срабатываний
+- отсутствие гарантии того, что все секреты будут найдены
+
+Как показал процесс выполнения задания, количество найденных секретов может зависеть как от используемой утилиты, режима её использования и настроек.
+
+Однако, как один из этапов проверки приложения на выполнение требований безопасности, автоматическая проверка секретов является хорошей практикой, но не исключает ручной проверки кода на наличие чувствительных данных как при анализе результата автоматической проверки, так и при выполнении code review.

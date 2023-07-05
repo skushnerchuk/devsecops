@@ -1,0 +1,764 @@
+Finding:     TOKEN: cee3257f0e59d1d4975a35429cffc3d8b5fabe15ca2e9d47243cbc446d4894a5
+Secret:      cee3257f0e59d1d4975a35429cffc3d8b5fabe15ca2e9d47243cbc446d4894a5
+RuleID:      generic-api-key
+Entropy:     3.820313
+File:        .github/workflows/release.yml
+Line:        75
+Commit:      34f1faad298b13e515a62330f593dac142506789
+Author:      Lookatshow
+Email:       lookatshow.a@yandex.ru
+Date:        2021-11-22T16:20:34Z
+Fingerprint: 34f1faad298b13e515a62330f593dac142506789:.github/workflows/release.yml:generic-api-key:75
+
+Finding:     -----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCpuOH6AnMc/xdJ
+Fo/8z5j+MTLS1yVHANOgQgAxrIczt9uS9vi9UtE0377fL0TQs5Uo97rSuS6ZJ0ac
+WKhNEMBFhR3unINs1FC9PzEjI7UDnSacZNg19eCsAn8hdO88TTt5YhIsPZyg0E29
+KbzuLiBhSaKFmnmGbh+T4l9ZIy/t1BcOfzFOpvhEMIriRgA3asZpg8CnNosvbO2A
+lZ6Z7nFOibJ1hrzQQgl2Ev+nf5VRxo34UGGbF+65mCGFmBvOYn+IbsciADT+2/4T
+gr3aVWD5zwn2NRQI5FKpFePVArpfI85Lxt4eHYzpTWI5dYd++H1BesjoT0ZEM0DP
+IVfvMN4XAgMBAAECggEAfkD6WXDZEQjx2XzfP8FunikbFZzWLit/QgfW/RzKtr5e
+qMTv5GZnGl4XLw+KsXXlz8P5RihbcbK15DhPeoSrgwuzaH0lhx+psB4B/5HgZf/R
+aSXbcMiniU2SJOFH1iPdyj4aJq7uhPJv4ffag5PsonKUY662GDpzYx9SroxuawvU
+kUyHGnXP+QN3obFbHUqVx72GhwbyvKUXU4wMdQob+QRmB1excNCGVoGDfKVVOev6
+S38+rDCbHo0gK+4UF4ljlJAhbZwQTvv7LoXJu27kUlAvGObjFY8hfbs9T2BStnmh
+8D87TMp77gAhymqB+OS6OQrbnO/4HG7L+hgougmfgQKBgQDXYycFMwRoR4qyeKNa
+mGxQghvsfJdaWO2axS5RikPi5YkpIfYwuUKLL/niRwCslBz20iFihIJS2dWuOLYD
+OqAXUbUDAMbjYioWoMNDp6D3Y3eqSkmMAU3Ra+qBusQmp0Ffcr0GNL5xnsu1nmO+
+jOOBZ7YD5Hry5oIjvfDmBMTumwKBgQDJuXQbGYz/0d12Feg616zyqDUXcLSQWK7F
+nz1140VPdwfvWHMYWomUats5yMxycuGGDe/DH779rKJHT9U9xGsjlSQvLex0QMy8
+ddn7vvfLoPzhQx6NAVvobaobY2+MSgJmOedrd2n7p/RGTTSAwdIsghy2BNxdYgZD
+P4uBMf3oNQKBgQDIS7OQuTXDB6yqdVdru00WvTfcfqx9Xy9ueymsuEiTKuOXdbas
+7ss8Bpx5WY/97SrWOOjE5fcPtvVoM+LHM/CGXvxW05UhBTugmVWch7k/9ablnHmy
+kc/dDV8hzx3z2BwJ9/hiWhA0Nvi3Z5jYLcqvn1N7YTEYy1WAiXUJYqwEOwKBgQCM
+m3D7pr6qXi1Arxp1UXoile6TzSJ+7uG7rDhZ4LWiIzTrtzpaglkdk7IFQBqJt9vM
+5g/2cT1ecqOWk2XurOeFIOLc4+TKT5Sl1HvBxyXP0QITPgaggI8AntgQSSoqnje3
+66qMNOsx16skCZKMIQ2Pqo26rf6wNLBq1XM29ZKm9QKBgGeefgyYgirI1TdjpqVk
+B5GhVf+D4wozBvJFAwmVBAQFFU1wCJV7aiwT/RL9KP21Ahfil5Ll7OHE80S4yRU2
+g5Y5/F3ExwrIUWdnnMgsO3VtmpgBR5ADBbMQ2Wyo8VF9+tENtlFfnRDRFZl09x1H
+oX44T7mclitCYaOuoRnC2V5H
+-----END PRIVATE KEY----
+Secret:      -----BEGIN PRIVATE KEY-----
+MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCpuOH6AnMc/xdJ
+Fo/8z5j+MTLS1yVHANOgQgAxrIczt9uS9vi9UtE0377fL0TQs5Uo97rSuS6ZJ0ac
+WKhNEMBFhR3unINs1FC9PzEjI7UDnSacZNg19eCsAn8hdO88TTt5YhIsPZyg0E29
+KbzuLiBhSaKFmnmGbh+T4l9ZIy/t1BcOfzFOpvhEMIriRgA3asZpg8CnNosvbO2A
+lZ6Z7nFOibJ1hrzQQgl2Ev+nf5VRxo34UGGbF+65mCGFmBvOYn+IbsciADT+2/4T
+gr3aVWD5zwn2NRQI5FKpFePVArpfI85Lxt4eHYzpTWI5dYd++H1BesjoT0ZEM0DP
+IVfvMN4XAgMBAAECggEAfkD6WXDZEQjx2XzfP8FunikbFZzWLit/QgfW/RzKtr5e
+qMTv5GZnGl4XLw+KsXXlz8P5RihbcbK15DhPeoSrgwuzaH0lhx+psB4B/5HgZf/R
+aSXbcMiniU2SJOFH1iPdyj4aJq7uhPJv4ffag5PsonKUY662GDpzYx9SroxuawvU
+kUyHGnXP+QN3obFbHUqVx72GhwbyvKUXU4wMdQob+QRmB1excNCGVoGDfKVVOev6
+S38+rDCbHo0gK+4UF4ljlJAhbZwQTvv7LoXJu27kUlAvGObjFY8hfbs9T2BStnmh
+8D87TMp77gAhymqB+OS6OQrbnO/4HG7L+hgougmfgQKBgQDXYycFMwRoR4qyeKNa
+mGxQghvsfJdaWO2axS5RikPi5YkpIfYwuUKLL/niRwCslBz20iFihIJS2dWuOLYD
+OqAXUbUDAMbjYioWoMNDp6D3Y3eqSkmMAU3Ra+qBusQmp0Ffcr0GNL5xnsu1nmO+
+jOOBZ7YD5Hry5oIjvfDmBMTumwKBgQDJuXQbGYz/0d12Feg616zyqDUXcLSQWK7F
+nz1140VPdwfvWHMYWomUats5yMxycuGGDe/DH779rKJHT9U9xGsjlSQvLex0QMy8
+ddn7vvfLoPzhQx6NAVvobaobY2+MSgJmOedrd2n7p/RGTTSAwdIsghy2BNxdYgZD
+P4uBMf3oNQKBgQDIS7OQuTXDB6yqdVdru00WvTfcfqx9Xy9ueymsuEiTKuOXdbas
+7ss8Bpx5WY/97SrWOOjE5fcPtvVoM+LHM/CGXvxW05UhBTugmVWch7k/9ablnHmy
+kc/dDV8hzx3z2BwJ9/hiWhA0Nvi3Z5jYLcqvn1N7YTEYy1WAiXUJYqwEOwKBgQCM
+m3D7pr6qXi1Arxp1UXoile6TzSJ+7uG7rDhZ4LWiIzTrtzpaglkdk7IFQBqJt9vM
+5g/2cT1ecqOWk2XurOeFIOLc4+TKT5Sl1HvBxyXP0QITPgaggI8AntgQSSoqnje3
+66qMNOsx16skCZKMIQ2Pqo26rf6wNLBq1XM29ZKm9QKBgGeefgyYgirI1TdjpqVk
+B5GhVf+D4wozBvJFAwmVBAQFFU1wCJV7aiwT/RL9KP21Ahfil5Ll7OHE80S4yRU2
+g5Y5/F3ExwrIUWdnnMgsO3VtmpgBR5ADBbMQ2Wyo8VF9+tENtlFfnRDRFZl09x1H
+oX44T7mclitCYaOuoRnC2V5H
+-----END PRIVATE KEY----
+RuleID:      private-key
+Entropy:     6.016163
+File:        webgoat-server/privatekey.key
+Line:        1
+Commit:      34f1faad298b13e515a62330f593dac142506789
+Author:      Lookatshow
+Email:       lookatshow.a@yandex.ru
+Date:        2021-11-22T16:20:34Z
+Fingerprint: 34f1faad298b13e515a62330f593dac142506789:webgoat-server/privatekey.key:private-key:1
+
+Finding:     token = "rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZSBtZSBkb3duLCBJIHNoYWxsIGJlY29tZSBtb3JlIHBvd2VyZnVsIHRoYW4geW91IGNhbiBwb3NzaWJseSBpbWFnaW5l"
+Secret:      rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZSBtZSBkb3duLCBJIHNoYWxsIGJlY29tZSBtb3JlIHBvd2VyZnVsIHRoYW4geW91IGNhbiBwb3NzaWJseSBpbWFnaW5l
+RuleID:      generic-api-key
+Entropy:     5.290349
+File:        webgoat-lessons/insecure-deserialization/src/test/java/org/owasp/webgoat/deserialization/DeserializeTest.java
+Line:        80
+Commit:      04d1293a33c04fa0a9812879952bccd7305a0ca5
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2021-09-23T12:04:53Z
+Fingerprint: 04d1293a33c04fa0a9812879952bccd7305a0ca5:webgoat-lessons/insecure-deserialization/src/test/java/org/owasp/webgoat/deserialization/DeserializeTest.java:generic-api-key:80
+
+Finding:     -----BEGIN PRIVATE KEY-----\n";
+        encodedString = encodedString+new String(Base64.getEncoder().encode(keyPair.getPrivate().getEncoded()),Charset.forName("UTF-8"))+"\n";
+        encodedString = encodedString+"-----END PRIVATE KEY-----\n";
+        return encodedString;
+    }
+
+    public static String signMessage(String message, PrivateKey privateKey) {
+
+        log.debug("start signMessage");
+        String signature = null;
+		
+		try {
+			//Initiate signature verification
+			Signature instance = Signature.getInstance("SHA256withRSA");
+			instance.initSign(privateKey);
+            instance.update(message.getBytes("UTF-8"));
+            
+            //actual verification against signature
+			signature = new String(Base64.getEncoder().encode(instance.sign()), Charset.forName("UTF-8"));
+
+			log.info("signe the signature with result: {}", signature);
+		} catch (Exception e) {
+			log.error("Signature signing failed", e);
+		}
+
+		log.debug("end signMessage");
+		return signature;
+	}
+    
+    public static boolean verifyMessage(String message, String base64EncSignature,
+			PublicKey publicKey) {
+
+		log.debug("start verifyMessage");
+
+		//get raw signature from base64 encrypted string in header
+		byte[] decodedSignature = Base64.getDecoder().decode(base64EncSignature);
+		boolean result = false;
+		
+		try {
+			//Initiate signature verification
+			Signature instance = Signature.getInstance("SHA256withRSA");
+			instance.initVerify(publicKey);
+            instance.update(message.getBytes("UTF-8"));
+            
+            //actual verification against signature
+			result = instance.verify(decodedSignature);
+
+			log.info("Verified the signature with result: {}", result);
+		} catch (Exception e) {
+			log.error("Signature verification failed", e);
+		}
+
+		log.debug("end verifyMessage");
+		return result;
+	}
+
+	public static boolean verifyAssignment(String modulus, String signature, PublicKey publicKey) {
+
+		/* first check if the signature is correct, i.e. right private key and right hash */
+		boolean result = false;
+		
+		if (modulus != null && signature != null) {
+			result = verifyMessage(modulus, signature, publicKey);
+
+			/*
+			 * next check if the submitted modulus is the correct modulus of the public key
+			 */
+			RSAPublicKey rsaPubKey = (RSAPublicKey) publicKey;
+			if (modulus.length()==512) {
+				modulus = "00".concat(modulus);
+			}
+			result = result && (DatatypeConverter.printHexBinary(rsaPubKey.getModulus().toByteArray()).equals(modulus.toUpperCase()));
+		}
+		return result;
+
+	}
+
+	public static PrivateKey getPrivateKeyFromPEM(String privateKeyPem) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		privateKeyPem = privateKeyPem.replace("-----BEGIN PRIVATE KEY-----", "");
+		privateKeyPem = privateKeyPem.replace("-----END PRIVATE KEY----
+Secret:      -----BEGIN PRIVATE KEY-----\n";
+        encodedString = encodedString+new String(Base64.getEncoder().encode(keyPair.getPrivate().getEncoded()),Charset.forName("UTF-8"))+"\n";
+        encodedString = encodedString+"-----END PRIVATE KEY-----\n";
+        return encodedString;
+    }
+
+    public static String signMessage(String message, PrivateKey privateKey) {
+
+        log.debug("start signMessage");
+        String signature = null;
+		
+		try {
+			//Initiate signature verification
+			Signature instance = Signature.getInstance("SHA256withRSA");
+			instance.initSign(privateKey);
+            instance.update(message.getBytes("UTF-8"));
+            
+            //actual verification against signature
+			signature = new String(Base64.getEncoder().encode(instance.sign()), Charset.forName("UTF-8"));
+
+			log.info("signe the signature with result: {}", signature);
+		} catch (Exception e) {
+			log.error("Signature signing failed", e);
+		}
+
+		log.debug("end signMessage");
+		return signature;
+	}
+    
+    public static boolean verifyMessage(String message, String base64EncSignature,
+			PublicKey publicKey) {
+
+		log.debug("start verifyMessage");
+
+		//get raw signature from base64 encrypted string in header
+		byte[] decodedSignature = Base64.getDecoder().decode(base64EncSignature);
+		boolean result = false;
+		
+		try {
+			//Initiate signature verification
+			Signature instance = Signature.getInstance("SHA256withRSA");
+			instance.initVerify(publicKey);
+            instance.update(message.getBytes("UTF-8"));
+            
+            //actual verification against signature
+			result = instance.verify(decodedSignature);
+
+			log.info("Verified the signature with result: {}", result);
+		} catch (Exception e) {
+			log.error("Signature verification failed", e);
+		}
+
+		log.debug("end verifyMessage");
+		return result;
+	}
+
+	public static boolean verifyAssignment(String modulus, String signature, PublicKey publicKey) {
+
+		/* first check if the signature is correct, i.e. right private key and right hash */
+		boolean result = false;
+		
+		if (modulus != null && signature != null) {
+			result = verifyMessage(modulus, signature, publicKey);
+
+			/*
+			 * next check if the submitted modulus is the correct modulus of the public key
+			 */
+			RSAPublicKey rsaPubKey = (RSAPublicKey) publicKey;
+			if (modulus.length()==512) {
+				modulus = "00".concat(modulus);
+			}
+			result = result && (DatatypeConverter.printHexBinary(rsaPubKey.getModulus().toByteArray()).equals(modulus.toUpperCase()));
+		}
+		return result;
+
+	}
+
+	public static PrivateKey getPrivateKeyFromPEM(String privateKeyPem) throws NoSuchAlgorithmException, InvalidKeySpecException {
+		privateKeyPem = privateKeyPem.replace("-----BEGIN PRIVATE KEY-----", "");
+		privateKeyPem = privateKeyPem.replace("-----END PRIVATE KEY----
+RuleID:      private-key
+Entropy:     5.080928
+File:        webgoat-lessons/crypto/src/main/java/org/owasp/webgoat/crypto/CryptoUtil.java
+Line:        44
+Commit:      b5e5dd1d1396cf175874ec8e74e1d9852bc037bd
+Author:      René Zubcevic
+Email:       rene@zubcevic.com
+Date:        2019-11-23T20:52:14Z
+Fingerprint: b5e5dd1d1396cf175874ec8e74e1d9852bc037bd:webgoat-lessons/crypto/src/main/java/org/owasp/webgoat/crypto/CryptoUtil.java:private-key:44
+
+Finding:     keyCode.END:s=this.anchors.length-1;
+Secret:      s=this.anchors.length-1
+RuleID:      generic-api-key
+Entropy:     3.849224
+File:        webgoat-container/src/main/resources/static/js/libs/jquery-ui.min.js
+Line:        13
+Commit:      e25f7a7560a1335f3eb3100131fb3e36985cd738
+Author:      René Zubcevic
+Email:       rene@zubcevic.com
+Date:        2020-04-07T18:17:20Z
+Fingerprint: e25f7a7560a1335f3eb3100131fb3e36985cd738:webgoat-container/src/main/resources/static/js/libs/jquery-ui.min.js:generic-api-key:13
+
+Finding:     token = "rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZSBtZSBkb3duLCBJIHNoYWxsIGJlY29tZSBtb3JlIHBvd2VyZnVsIHRoYW4geW91IGNhbiBwb3NzaWJseSBpbWFnaW5l"
+Secret:      rO0ABXQAVklmIHlvdSBkZXNlcmlhbGl6ZSBtZSBkb3duLCBJIHNoYWxsIGJlY29tZSBtb3JlIHBvd2VyZnVsIHRoYW4geW91IGNhbiBwb3NzaWJseSBpbWFnaW5l
+RuleID:      generic-api-key
+Entropy:     5.290349
+File:        webgoat-lessons/insecure-deserialization/src/test/java/org/owasp/webgoat/deserialization/DeserializeTest.java
+Line:        83
+Commit:      75367707697002a4bc60e9d7be3d3133db238d7b
+Author:      René Zubcevic
+Email:       rene@zubcevic.com
+Date:        2019-10-02T06:26:48Z
+Fingerprint: 75367707697002a4bc60e9d7be3d3133db238d7b:webgoat-lessons/insecure-deserialization/src/test/java/org/owasp/webgoat/deserialization/DeserializeTest.java:generic-api-key:83
+
+Finding:     PASSWORD_LINK = "375afe1104f4a487a73823c50a9292a2"
+Secret:      375afe1104f4a487a73823c50a9292a2
+RuleID:      generic-api-key
+Entropy:     3.566428
+File:        webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/SolutionConstants.java
+Line:        36
+Commit:      82ad0a7cc7a3cb44a94647f6d4504d8ee2f7eb3a
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2019-09-18T15:53:43Z
+Fingerprint: 82ad0a7cc7a3cb44a94647f6d4504d8ee2f7eb3a:webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/challenges/SolutionConstants.java:generic-api-key:36
+
+Finding:     eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJpYXQiOjE1MjQyMTA5MDQsImV4cCI6MTYxODkwNTMwNCwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5jb20iLCJ1c2VybmFtZSI6IlRvbSIsIkVtYWlsIjoidG9tQHdlYmdvYXQuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.vPe-qQPOt78zK8wrbN1TjNJj3LeX9Qbch6oo23RUJgM
+Secret:      eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJpYXQiOjE1MjQyMTA5MDQsImV4cCI6MTYxODkwNTMwNCwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5jb20iLCJ1c2VybmFtZSI6IlRvbSIsIkVtYWlsIjoidG9tQHdlYmdvYXQuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.vPe-qQPOt78zK8wrbN1TjNJj3LeX9Qbch6oo23RUJgM
+RuleID:      jwt
+Entropy:     5.610505
+File:        webgoat-lessons/jwt/src/main/resources/lessonPlans/en/JWT_weak_keys
+Line:        12
+Commit:      a7b82985d4cc3fab14bd411beb0375cac85a44c2
+Author:      Matthias Grundmann
+Email:       matthias.grundmann@kit.edu
+Date:        2018-06-08T17:31:32Z
+Fingerprint: a7b82985d4cc3fab14bd411beb0375cac85a44c2:webgoat-lessons/jwt/src/main/resources/lessonPlans/en/JWT_weak_keys:jwt:12
+
+Finding:     password: "bm5nhSkxCXZkKRy4"
+Secret:      bm5nhSkxCXZkKRy4
+RuleID:      generic-api-key
+Entropy:     3.875000
+File:        webgoat-lessons/jwt/src/main/resources/js/jwt-refresh.js
+Line:        10
+Commit:      dda6f674a3e8a87c3c9df1983895d372d4221fea
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-22T15:06:03Z
+Fingerprint: dda6f674a3e8a87c3c9df1983895d372d4221fea:webgoat-lessons/jwt/src/main/resources/js/jwt-refresh.js:generic-api-key:10
+
+Finding:     PASSWORD = "bm5nhSkxCXZkKRy4"
+Secret:      bm5nhSkxCXZkKRy4
+RuleID:      generic-api-key
+Entropy:     3.875000
+File:        webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/JWTRefreshEndpoint.java
+Line:        34
+Commit:      dda6f674a3e8a87c3c9df1983895d372d4221fea
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-22T15:06:03Z
+Fingerprint: dda6f674a3e8a87c3c9df1983895d372d4221fea:webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/JWTRefreshEndpoint.java:generic-api-key:34
+
+Finding:     PASSWORD = "bm5n3SkxCX4kKRy4"
+Secret:      bm5n3SkxCX4kKRy4
+RuleID:      generic-api-key
+Entropy:     3.750000
+File:        webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/JWTRefreshEndpoint.java
+Line:        35
+Commit:      dda6f674a3e8a87c3c9df1983895d372d4221fea
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-22T15:06:03Z
+Fingerprint: dda6f674a3e8a87c3c9df1983895d372d4221fea:webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/JWTRefreshEndpoint.java:generic-api-key:35
+
+Finding:     eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE0OTUyODU3NDUsImV4cCI6MTQ5NTI4NTc0NSwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5vcmciLCJuYW1lIjoiVG9tIiwiZW1haWwiOiJ0b21Ad2ViZ29hdC5jb20iLCJyb2xlIjoiQ2F0In0.NTd3E17JZlVKZk52Wq_AWZ0RDafV5KDRMuJner_zUn4"
+Secret:      eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE0OTUyODU3NDUsImV4cCI6MTQ5NTI4NTc0NSwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5vcmciLCJuYW1lIjoiVG9tIiwiZW1haWwiOiJ0b21Ad2ViZ29hdC5jb20iLCJyb2xlIjoiQ2F0In0.NTd3E17JZlVKZk52Wq_AWZ0RDafV5KDRMuJner_zUn4"
+RuleID:      jwt
+Entropy:     5.520169
+File:        webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/refresh/RefreshEndpoint.java
+Line:        5
+Commit:      9d7886d572218efd299523b01b71b1a9feb9bdb4
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-21T10:41:37Z
+Fingerprint: 9d7886d572218efd299523b01b71b1a9feb9bdb4:webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/refresh/RefreshEndpoint.java:jwt:5
+
+Finding:     KEY = "qwertyuiopasdfghjklzxcvbnm123456"
+Secret:      qwertyuiopasdfghjklzxcvbnm123456
+RuleID:      generic-api-key
+Entropy:     5.000000
+File:        webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/refresh/RefreshEndpoint.java
+Line:        6
+Commit:      9d7886d572218efd299523b01b71b1a9feb9bdb4
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-21T10:41:37Z
+Fingerprint: 9d7886d572218efd299523b01b71b1a9feb9bdb4:webgoat-lessons/jwt/src/main/java/org/owasp/webgoat/plugin/refresh/RefreshEndpoint.java:generic-api-key:6
+
+Finding:     authenticity_token=264c8bf11e0212227c001b77543c3519
+Secret:      264c8bf11e0212227c001b77543c3519
+RuleID:      generic-api-key
+Entropy:     3.578627
+File:        webgoat-lessons/jwt/src/main/resources/images/logs.txt
+Line:        2
+Commit:      9d7886d572218efd299523b01b71b1a9feb9bdb4
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-05-21T10:41:37Z
+Fingerprint: 9d7886d572218efd299523b01b71b1a9feb9bdb4:webgoat-lessons/jwt/src/main/resources/images/logs.txt:generic-api-key:2
+
+Finding:     eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJpYXQiOjE1MjQyMTA5MDQsImV4cCI6MTYxODkwNTMwNCwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5jb20iLCJ1c2VybmFtZSI6IlRvbSIsIkVtYWlsIjoidG9tQHdlYmdvYXQuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.m-jSyfYEsVzD3CBI6N39wZ7AcdKdp_GiO7F_Ym12u-0
+Secret:      eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJXZWJHb2F0IFRva2VuIEJ1aWxkZXIiLCJpYXQiOjE1MjQyMTA5MDQsImV4cCI6MTYxODkwNTMwNCwiYXVkIjoid2ViZ29hdC5vcmciLCJzdWIiOiJ0b21Ad2ViZ29hdC5jb20iLCJ1c2VybmFtZSI6IlRvbSIsIkVtYWlsIjoidG9tQHdlYmdvYXQuY29tIiwiUm9sZSI6WyJNYW5hZ2VyIiwiUHJvamVjdCBBZG1pbmlzdHJhdG9yIl19.m-jSyfYEsVzD3CBI6N39wZ7AcdKdp_GiO7F_Ym12u-0
+RuleID:      jwt
+Entropy:     5.561133
+File:        webgoat-lessons/jwt/src/main/resources/lessonPlans/en/JWT_weak_keys
+Line:        12
+Commit:      ea9c1a453db30b0e549a2258927c233c0e5e25c7
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2018-04-23T09:09:30Z
+Fingerprint: ea9c1a453db30b0e549a2258927c233c0e5e25c7:webgoat-lessons/jwt/src/main/resources/lessonPlans/en/JWT_weak_keys:jwt:12
+
+Finding:     PASSWORD_LINK = "375afe1104f4a487a73823c50a9292a2"
+Secret:      375afe1104f4a487a73823c50a9292a2
+RuleID:      generic-api-key
+Entropy:     3.566428
+File:        webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/plugin/SolutionConstants.java
+Line:        17
+Commit:      46c536554c93308cb037d45f52eaf1a91394c109
+Author:      Nanne Baars
+Email:       nanne.baars@owasp.org
+Date:        2017-08-13T09:22:52Z
+Fingerprint: 46c536554c93308cb037d45f52eaf1a91394c109:webgoat-lessons/challenge/src/main/java/org/owasp/webgoat/plugin/SolutionConstants.java:generic-api-key:17
+
+Finding:     AKIAJQLKPGHXRH2AH5QA
+Secret:      AKIAJQLKPGHXRH2AH5QA
+RuleID:      aws-access-token
+Entropy:     3.484184
+File:        .travis.yml
+Line:        20
+Commit:      faeb5b1b2486d5b613a55d8730e00b43923683d8
+Author:      Nanne Baars
+Email:       nbaars@xebia.com
+Date:        2016-11-19T14:29:05Z
+Fingerprint: faeb5b1b2486d5b613a55d8730e00b43923683d8:.travis.yml:aws-access-token:20
+
+Finding:     AKIAJQLKPGHXRH2AH5QA
+Secret:      AKIAJQLKPGHXRH2AH5QA
+RuleID:      aws-access-token
+Entropy:     3.484184
+File:        .travis.yml
+Line:        20
+Commit:      431222e7408882ff015d409f82a367153c5d1bba
+Author:      Nanne Baars
+Email:       nbaars@xebia.com
+Date:        2016-11-19T14:11:53Z
+Fingerprint: 431222e7408882ff015d409f82a367153c5d1bba:.travis.yml:aws-access-token:20
+
+Finding:     AKIAJQLKPGHXRH2AH5QA
+Secret:      AKIAJQLKPGHXRH2AH5QA
+RuleID:      aws-access-token
+Entropy:     3.484184
+File:        .travis.yml
+Line:        32
+Commit:      431222e7408882ff015d409f82a367153c5d1bba
+Author:      Nanne Baars
+Email:       nbaars@xebia.com
+Date:        2016-11-19T14:11:53Z
+Fingerprint: 431222e7408882ff015d409f82a367153c5d1bba:.travis.yml:aws-access-token:32
+
+Finding:     AKIAJQLKPGHXRH2AH5QA
+Secret:      AKIAJQLKPGHXRH2AH5QA
+RuleID:      aws-access-token
+Entropy:     3.484184
+File:        .travis.yml
+Line:        15
+Commit:      5f58bf40aefcf7b9d2ee680dc70f2d292196a55d
+Author:      Doug Morato
+Email:       dm@corp.io
+Date:        2015-08-20T22:46:55Z
+Fingerprint: 5f58bf40aefcf7b9d2ee680dc70f2d292196a55d:.travis.yml:aws-access-token:15
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        src/main/java/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        63
+Commit:      3ae898784f16ed5c66ce8842fff9e9960166787d
+Author:      nbaars
+Email:       nbaars@xebia.com
+Date:        2014-09-15T14:40:51Z
+Fingerprint: 3ae898784f16ed5c66ce8842fff9e9960166787d:src/main/java/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:63
+
+Finding:     keyCode.END:a=this.anchors.length-1;
+Secret:      a=this.anchors.length-1
+RuleID:      generic-api-key
+Entropy:     3.882045
+File:        src/main/webapp/js/jquery/jquery-ui-1.10.4.custom.min.js
+Line:        7
+Commit:      6d431ca1fd3d6538c9368b6a08362e74f103ba1c
+Author:      diver-sity
+Email:       li.zhao7@yahoo.com.au
+Date:        2014-09-04T20:03:48Z
+Fingerprint: 6d431ca1fd3d6538c9368b6a08362e74f103ba1c:src/main/webapp/js/jquery/jquery-ui-1.10.4.custom.min.js:generic-api-key:7
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        webgoat-5.4/src/main/java/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        63
+Commit:      68b80fa14f8c2ece71df20ac0a3e3e710bbcd368
+Author:      mayhew64@gmail.com
+Email:       mayhew64@gmail.com@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2012-09-09T21:53:44Z
+Fingerprint: 68b80fa14f8c2ece71df20ac0a3e3e710bbcd368:webgoat-5.4/src/main/java/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:63
+
+Finding:     key":"5a049246-179f-42ad-87ac-8f080426c17c"
+Secret:      5a049246-179f-42ad-87ac-8f080426c17c
+RuleID:      generic-api-key
+Entropy:     3.710777
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"96f898f0-f6ff-4a9b-aac4-503992f31b01"
+Secret:      96f898f0-f6ff-4a9b-aac4-503992f31b01
+RuleID:      generic-api-key
+Entropy:     3.596892
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e"
+Secret:      d1f61e66-7708-4da6-aa05-7cbc33b44b7e
+RuleID:      generic-api-key
+Entropy:     3.773684
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"5a049246-179f-42ad-87ac-8f080426c17c"
+Secret:      5a049246-179f-42ad-87ac-8f080426c17c
+RuleID:      generic-api-key
+Entropy:     3.710777
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"96f898f0-f6ff-4a9b-aac4-503992f31b01"
+Secret:      96f898f0-f6ff-4a9b-aac4-503992f31b01
+RuleID:      generic-api-key
+Entropy:     3.596892
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e"
+Secret:      d1f61e66-7708-4da6-aa05-7cbc33b44b7e
+RuleID:      generic-api-key
+Entropy:     3.773684
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"5a049246-179f-42ad-87ac-8f080426c17c"
+Secret:      5a049246-179f-42ad-87ac-8f080426c17c
+RuleID:      generic-api-key
+Entropy:     3.710777
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"96f898f0-f6ff-4a9b-aac4-503992f31b01"
+Secret:      96f898f0-f6ff-4a9b-aac4-503992f31b01
+RuleID:      generic-api-key
+Entropy:     3.596892
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e"
+Secret:      d1f61e66-7708-4da6-aa05-7cbc33b44b7e
+RuleID:      generic-api-key
+Entropy:     3.773684
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"5a049246-179f-42ad-87ac-8f080426c17c"
+Secret:      5a049246-179f-42ad-87ac-8f080426c17c
+RuleID:      generic-api-key
+Entropy:     3.710777
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"96f898f0-f6ff-4a9b-aac4-503992f31b01"
+Secret:      96f898f0-f6ff-4a9b-aac4-503992f31b01
+RuleID:      generic-api-key
+Entropy:     3.596892
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key":"d1f61e66-7708-4da6-aa05-7cbc33b44b7e"
+Secret:      d1f61e66-7708-4da6-aa05-7cbc33b44b7e
+RuleID:      generic-api-key
+Entropy:     3.773684
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a"
+Secret:      7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a
+RuleID:      generic-api-key
+Entropy:     3.749582
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a"
+Secret:      7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a
+RuleID:      generic-api-key
+Entropy:     3.749582
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a"
+Secret:      7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a
+RuleID:      generic-api-key
+Entropy:     3.749582
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key=7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a"
+Secret:      7cc9b583cb5a62e8c15d3099e0bb46bbae9cf38a
+RuleID:      generic-api-key
+Entropy:     3.749582
+File:        src/main/webapp/js/ace/worker-xquery.js
+Line:        1
+Commit:      0c28f06d63d6e8f15c95737dc0c17da67a3111cf
+Author:      Dave
+Email:       dave.cowden@gmail.com
+Date:        2014-08-24T17:25:41Z
+Fingerprint: 0c28f06d63d6e8f15c95737dc0c17da67a3111cf:src/main/webapp/js/ace/worker-xquery.js:generic-api-key:1
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        63
+Commit:      581151f16691723f0a06dd4730a0df9e8e392347
+Author:      sherif.fathy
+Email:       sherif.fathy@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2008-07-12T05:56:41Z
+Fingerprint: 581151f16691723f0a06dd4730a0df9e8e392347:main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:63
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        63
+Commit:      c8908f6911d6accb4164eb28cb05b59475cf4e93
+Author:      sherif.fathy
+Email:       sherif.fathy@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2008-07-12T05:56:41Z
+Fingerprint: c8908f6911d6accb4164eb28cb05b59475cf4e93:webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:63
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        64
+Commit:      a8db8989c8620d0c2c53e8669b74b9f69b2a0e1a
+Author:      mayhew64
+Email:       mayhew64@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2008-02-27T00:29:19Z
+Fingerprint: a8db8989c8620d0c2c53e8669b74b9f69b2a0e1a:main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:64
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        64
+Commit:      841c995be73c35312e18eed42de1e0eb5b15a491
+Author:      mayhew64
+Email:       mayhew64@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2008-02-27T00:29:19Z
+Fingerprint: 841c995be73c35312e18eed42de1e0eb5b15a491:webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:64
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:        main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        65
+Commit:      b0b94c4688ba5af591c6120aa44902e72561e372
+Author:      rogan.dawes
+Email:       rogan.dawes@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2008-01-14T14:02:11Z
+Fingerprint: b0b94c4688ba5af591c6120aa44902e72561e372:main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:65
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:         webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        62
+Commit:      fd9b60f98e18bf419b23d269840d133a7ad0512a
+Author:      mayhew64
+Email:       mayhew64@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2007-01-16T14:56:40Z
+Fingerprint: fd9b60f98e18bf419b23d269840d133a7ad0512a: webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:62
+
+Finding:     key = "K1JFWP8BSO8HI52LNPQS8F5L01N"
+Secret:      K1JFWP8BSO8HI52LNPQS8F5L01N
+RuleID:      generic-api-key
+Entropy:     4.060262
+File:         webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java
+Line:        40
+Commit:      296254e279f50f69b0853c6977ed3283167b1c9e
+Author:      sherif.fathy
+Email:       sherif.fathy@4033779f-a91e-0410-96ef-6bf7bf53c507
+Date:        2006-12-16T22:39:14Z
+Fingerprint: 296254e279f50f69b0853c6977ed3283167b1c9e: webgoat/main/project/JavaSource/org/owasp/webgoat/lessons/DOMInjection.java:generic-api-key:40
+
