@@ -17,3 +17,5 @@
 Занятие № 10 [Безопасная разработка и уязвимости программного кода](https://github.com/skushnerchuk/devsecops/tree/master/month-2/10)
 
 Занятие № 16 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/15)
+
+Занятие № 19 [Обеспечение безопасности в Docker контейнерах](https://github.com/skushnerchuk/devsecops/tree/master/month-3/19)
