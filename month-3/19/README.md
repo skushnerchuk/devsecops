@@ -32,7 +32,7 @@ trufflehog https://github.com/OtusTeam/DevSecOps_secret-finding.git
 Последнее обновление на момент написания - [19 января 2023 года](https://pypi.org/project/trufflehog3/).
 
 ```bash
-trufflehog3 --no-entropy -f text -o th3_git.log https://github.com/OtusTeam/DevSecOps_secret-finding.git
+trufflehog3 --no-entropy https://github.com/OtusTeam/DevSecOps_secret-finding.git
 ```
 
 Размер [итогового лога](logs/trufflehog3.tar.gz) - 57,9 Мб. Очень сложен в анализе, не имеет нормальной структуры.
@@ -46,7 +46,7 @@ trufflehog3 --no-entropy -f text -o th3_git.log https://github.com/OtusTeam/DevS
 Запустим процесс поиска 
 
 ```bash
-trufflehog git https://github.com/OtusTeam/DevSecOps_secret-finding.git | tee -a log.txt
+trufflehog git https://github.com/OtusTeam/DevSecOps_secret-finding.git
 ```
 
 Размер  [итогового лога](logs/trufflehog_go.log) - 16,4 Кб. Хорошо структурирован, прост в анализе.
