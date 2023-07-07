@@ -20,7 +20,7 @@ https://github.com/feeltheajf/trufflehog3
 Последнее обновление на момент написания - [5 февраля 2021 года](https://pypi.org/project/truffleHog/).
 
 ```bash
-trufflehog https://github.com/OtusTeam/DevSecOps_secret-finding.git > th_git.log 
+trufflehog https://github.com/OtusTeam/DevSecOps_secret-finding.git
 ```
 
 Размер [итогового лога](logs/trufflehog.tar.gz) - 42 Мб. Очень сложен в анализе, не имеет нормальной структуры.
